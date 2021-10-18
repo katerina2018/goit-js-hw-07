@@ -48,3 +48,9 @@ console.log('🚀 ~ gallery.overlay', gallery.defaultOptions.scrollZoom);
 
 // console.log('🚀 ~ gallery.overlay', gallery.defaultOptions.captionPosition);
 // gallery.overlay ;
+
+// let gallery = new SimpleLightbox('.gallery a', {
+//   captionsData: 'alt',
+//   captionPosition: 'bottom',
+//   captionDelay: 250,
+// });
