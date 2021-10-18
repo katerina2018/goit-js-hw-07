@@ -1,8 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-// console.log(galleryItems);
-
 const galleryItemWrapper = document.querySelector('.gallery');
 
 galleryItemWrapper.insertAdjacentHTML(
@@ -31,26 +29,10 @@ function onItemGalleryClick(e) {
     }
 }
 
-let gallery = new SimpleLightbox('.gallery a');
-console.log('🚀 ~ gallery', gallery);
-
-gallery.on('change.simplelightbox', function() {
-    // do something…
+let gallery = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+    showCounter: false,
+    scrollZoom: false,
 });
-
-gallery.defaultOptions.captionsData = 'alt';
-gallery.defaultOptions.showCounter = false;
-gallery.defaultOptions.captionPosition = 'top'; //не работает??
-gallery.defaultOptions.captionDelay = 250;
-// gallery.defaultOptions.scrollZoom = false;
-gallery.defaultOptions.scrollZoomFactor = 0;
-console.log('🚀 ~ gallery.overlay', gallery.defaultOptions.scrollZoom);
-
-// console.log('🚀 ~ gallery.overlay', gallery.defaultOptions.captionPosition);
-// gallery.overlay ;
-
-// let gallery = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt',
-//   captionPosition: 'bottom',
-//   captionDelay: 250,
-// });

@@ -1,8 +1,8 @@
 if ('loading' in HTMLImageElement.prototype) {
-    console.log('Браузер поддерживает lazyload');
+    // console.log('Браузер поддерживает lazyload');
     addSrcAttrToLazyImages();
 } else {
-    console.log('Браузер НЕ поддерживает lazyload');
+    // console.log('Браузер НЕ поддерживает lazyload');
     addLazySizesScript();
 }
 
