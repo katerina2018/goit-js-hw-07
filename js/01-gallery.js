@@ -42,7 +42,7 @@ function onItemGalleryClick(e) {
     }
 
     let modal = itemIvent(e);
-    console.log('message3');
+
     modal.show();
 
     const elDiv = document.querySelector('div.basicLightbox ');
@@ -51,13 +51,11 @@ function onItemGalleryClick(e) {
 
     function onEscKeyPress(e) {
         const ESC_KEY_CODE = 'Escape';
-        const isEscKey = e.code === ESC_KEY_CODE;
+        const isEscKey = e.code;
 
-        if (isEscKey) {
-            console.log('вызов по условию onEscKeyPress');
-
+        if (isEscKey === ESC_KEY_CODE) {
             modal.close();
         }
-        console.log('вызов  onEscKeyPress');
+        window.removeEventListener('keydown', onEscKeyPress);
     }
 }

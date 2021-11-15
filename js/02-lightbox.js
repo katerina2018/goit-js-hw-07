@@ -13,8 +13,7 @@ galleryItemWrapper.addEventListener('click', onItemGalleryClick);
 function createGalleryItems(galleryItems) {
     return galleryItems
         .map(({ preview, original, description }) => {
-            return `
-            
+            return ` 
                 <a class="gallery__item" href="${original}">
                     <img class="gallery__image" src="${preview}" alt="${description}" title="${description}" />
                 </a>
